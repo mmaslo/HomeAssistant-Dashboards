@@ -1,0 +1,83 @@
+type: custom:button-card
+name: 
+entity: null
+aspect_ratio: 1/1
+styles:
+  card:
+    - background-color: '#efefef'
+    - border-radius: 30px
+    - padding: 10px
+    - border: transparent
+    - box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+  name:
+    - font-weight: bold
+    - font-size: 30px
+    - align-self: middle
+    - justify-self: start
+    - padding-left: 10px
+    - padding-top: 10px
+    - padding-bottom: 10px
+    - letter-spacing: '-1.0px'
+  grid:
+    - grid-template-areas: '"n i1" "i i2" "i i3"'
+    - grid-template-columns: 72% 28%
+    - grid-template-rows: 1fr 1fr 1fr
+  custom_fields:
+    logo:
+      - position: absolute
+      - left: '-12%'
+      - top: 33%
+custom_fields:
+  logo:
+    card:
+      type: custom:button-card
+      color: transparent
+      show_name: false
+      entity_picture: /local/Images/
+      show_entity_picture: true
+      styles:
+        card:
+          - background-color: transparent
+          - border-style: none
+        icon:
+          - width: 150px
+          - height: 150px
+          - color: black
+          - padding: 5px
+          - background-color: '#e5e5ea'
+          - border-radius: 95px
+  i1:
+    card:
+      type: custom:button-card
+      entity: 
+      show_name: false
+      aspect_ratio: 1/1
+      tap_action:
+        action: call-service
+        service: 
+        data: {}
+        target:
+          entity_id:
+            - 
+      state:
+        - value: 'on'
+          icon: mdi:lightbulb-on-10
+        - value: 'off'
+          icon: mdi:lightbulb-outline
+      styles:
+        card:
+          - background-color: '#e5e5ea'
+          - border-radius: 35px
+          - border-style: none
+          - box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+        icon:
+          - width: 30px
+          - height: 30px
+          - color: black
+          - align-self: start
+          - text-align: start
+          - padding: 5px
+        img_cell:
+          - justify-content: middle
+          - align-self: middle
+          - margin: none
